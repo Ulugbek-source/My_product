@@ -106,22 +106,23 @@
 							a more personal experience for you and your customers.
 						</p>
 						<div
-							class="max-w-[469px] flex py-[8px] border border-[#EAEAEA] rounded-[100px] gap-[20px]"
+							class="pr-[8px] flex py-[8px] border border-[#EAEAEA] rounded-[100px] mb-[24px]"
 						>
 							<input
 								type="email"
 								name="email"
 								placeholder="Enter your email address"
 								required
-								class="pl-[27px] text-gray-700 text-[14px] focus:outline-none"
+								class="pl-[27px] w-[60%] md:w-[70%] text-gray-700 text-[12px] md:text-[14px] focus:outline-none"
 							/>
 							<button
 								type="submit"
-								class="bg-[#02897A] border border-transparent hover:bg-white hover:text-[#22343d] hover:border-[#EFEFEF] duration-300 text-white text-[14px] font-medium px-[25px] py-[15px] rounded-[100px]"
+								class="w-[40%] md:w-[30%] bg-[#02897A] border border-transparent hover:bg-white hover:text-[#22343d] hover:border-[#EFEFEF] duration-300 text-white text-[14px] font-medium px-[25px] py-[15px] rounded-[100px]"
 							>
 								Join Now
 							</button>
 						</div>
+
 						<div
 							class="flex gap-[9px] items-center justify-center lg:justify-start"
 						>
@@ -412,16 +413,22 @@
 					</h2>
 					<form class="flex flex-col gap-[45px]" method="post">
 						<input
+							name="name"
+							required
 							class="border border-[#E8E8E8] py-[19px] pl-[20px] rounded-[39px] bg-[#F5F5F5] outline-none"
 							type="text"
 							placeholder="Your name"
 						/>
 						<input
+							name="email"
+							required
 							class="border border-[#E8E8E8] py-[19px] pl-[20px] rounded-[39px] bg-[#F5F5F5] outline-none"
 							type="email"
 							placeholder="Your email"
 						/>
 						<textarea
+							name="text"
+							required
 							name=""
 							class="border border-[#E8E8E8] py-[19px] pl-[20px] bg-[#F5F5F5] outline-none h-[193px] h-[100px] max-h-[193px] resize-none"
 							placeholder="Your text"
