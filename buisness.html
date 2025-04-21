@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>My product</title>
+		<style type="text/tailwindcss">
+			@layer utilities {
+			}
+		</style>
+	</head>
+	<body
+		class="bg-white dark:bg-[#1F2E35] text-black transition-colors duration-300"
+	>
+		<header
+			class="pt-[19px] pb-[24px] fixed w-full top-0 z-[999] dark:bg-[#1F2E35] bg-white"
+		>
+			<div class="containers flex items-center justify-between">
+				<a class="flex gap-[16px] items-center" href="/">
+					<img
+						src="./images/site-logo.svg"
+						alt="Site logo image"
+						width="40"
+						height="36"
+					/>
+					<span
+						class="font-bold dark:text-white text-[30px] text-[#173A56] leading-[28px]"
+						>Product</span
+					>
+				</a>
+				<div class="flex gap-[24px] items-center">
+					<nav class="hidden lg:flex flex gap-[25px]">
+						<a
+							class="font-medium hover:font-semibold dark:text-white text-[#22343D] text-[16px] leading-[28px]"
+							href="#product"
+							>Product</a
+						>
+						<a
+							class="font-medium hover:font-semibold dark:text-white text-[#22343D] text-[16px] leading-[28px]"
+							href="#customer"
+							>Customers</a
+						>
+						<a
+							class="font-medium hover:font-semibold dark:text-white text-[#22343D] text-[16px] leading-[28px]"
+							href="#price"
+							>Pricing</a
+						>
+						<a
+							class="font-medium hover:font-semibold dark:text-white text-[#22343D] text-[16px] leading-[28px]"
+							href="#resource"
+							>Resources</a
+						>
+					</nav>
+					<button
+						class="hidden md:flex font-semibold dark:text-white text-[16px] text-[#173A56] hover:bg-[#02897A] hover:text-[#FFFFFF] duration-300 py-[10px] pl-[25px] pr-[22px] border-[1px] border-[#BCD0E5] rounded-[4px]"
+					>
+						Sign In
+					</button>
+					<button
+						class="hidden md:flex font-semibold text-[16px] text-[#FFFFFF] py-[10px] pl-[25px] pr-[23px] hover:bg-[#FFFFFF] hover:text-[#173A56] hover:border-[#BCD0E5] duration-300 bg-[#02897A] border-[1px] border-transparent rounded-[4px]"
+					>
+						Sign Up
+					</button>
+					<button id="toggleMode" class="btn">
+						<svg
+							width="32"
+							height="32"
+							viewBox="0 0 32 32"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect width="32" height="32" rx="16" fill="#F3F3F3" />
+							<path
+								d="M16 26C21.514 26 26 21.514 26 16C26 10.486 21.514 6 16 6C10.486 6 6 10.486 6 16C6 21.514 10.486 26 16 26ZM16 8C20.411 8 24 11.589 24 16C24 20.411 20.411 24 16 24C11.589 24 8 20.411 8 16C8 11.589 11.589 8 16 8Z"
+								fill="#02897A"
+							/>
+							<path
+								d="M23 16C23 12.134 19.865 9 16 9V23C19.865 23 23 19.866 23 16Z"
+								fill="#02897A"
+							/>
+						</svg>
+					</button>
+
+					<button id="menu-btn" class="lg:hidden">
+						<img src="./images/menu-icon.svg" alt="menu icon" />
+					</button>
+				</div>
+			</div>
+		</header>
+		<main class="mt-[80px]">
+			<section class="mb-[46px] lg:mb-[66px]">
+				<div
+					class="containers pt-[76px] pb-[66px] flex flex-col lg:flex-row gap-[87px] lg:gap-[80px]"
+				>
+					<div class="max-w-[700px] mx-auto lg:mx-0 text-center lg:text-start">
+						<h2
+							class="font-semibold dark:text-white text-[40px] text-[#22343D] leading-[149%] mb-[24px]"
+						>
+							Great Business made with Product.
+						</h2>
+						<p
+							class="font-normal dark:text-white text-[20px] text-[#22343D] leading-[160%] mb-[24px]"
+						>
+							Build better customer relationships easily messaging that provides
+							a more personal experience for you and your customers.
+						</p>
+						<div
+							class="max-w-[469px] flex py-[8px] border border-[#EAEAEA] rounded-[100px] gap-[20px]"
+						>
+							<input
+								type="email"
+								name="email"
+								placeholder="Enter your email address"
+								required
+								class="pl-[27px] text-gray-700 text-[14px] focus:outline-none"
+							/>
+							<button
+								type="submit"
+								class="bg-[#02897A] border border-transparent hover:bg-white hover:text-[#22343d] hover:border-[#EFEFEF] duration-300 text-white text-[14px] font-medium px-[25px] py-[15px] rounded-[100px]"
+							>
+								Join Now
+							</button>
+						</div>
+						<div
+							class="flex gap-[9px] items-center justify-center lg:justify-start"
+						>
+							<img
+								src="./images/buisness-content-image2.png"
+								alt="content image"
+							/>
+							<p class="font-normal dark:text-white text-[14px] text-[#1f5076]">
+								Join over <span class="font-medium text-[#098ba0]">4,000</span>+
+								other
+							</p>
+						</div>
+					</div>
+					<img
+						class="mx-auto lg:mx-0"
+						src="./images/buisness-content-image.png"
+						alt="content image"
+						width="541"
+						height="482"
+					/>
+				</div>
+			</section>
+			<section class="mb-[100px]">
+				<div class="containers">
+					<h2
+						class="font-bold dark:text-white text-[34px] text-[#22343D] mb-[8px] text-center"
+					>
+						Latest Stories
+					</h2>
+					<p
+						class="font-medium dark:text-white text-[16px] text-[#22343D] leading-[26px] text-center mb-[32px]"
+					>
+						We focus on ergonomics and meeting you where you work. It's only a
+						keystroke away.
+					</p>
+					<ul
+						class="flex flex-col lg:flex-row flex-wrap gap-[20px] mb-[32px] justify-center"
+					>
+						<li
+							class="mx-auto lg:mx-0 border border-[#DEDEDE] shadow-lg max-w-[340px] rounded-[8px]"
+						>
+							<img src="./images/card-latest-1.png" alt="card image" />
+							<div class="bg-white px-[24px] py-[24px]">
+								<p
+									class="font-normal text-[16px] text-[#22343D] leading-[28px] mb-[12px]"
+								>
+									By
+									<span
+										class="font-bold text-[16px] text-[#22343D] leading-[28px]"
+										>Wahid Ari</span
+									>
+									| 03 March 2019
+								</p>
+								<h3 class="font-bold text-[24px] text-[#22343D] leading-[40px]">
+									Increasing Prosperity With Positive Thinking
+								</h3>
+							</div>
+						</li>
+						<li
+							class="mx-auto lg:mx-0 border border-[#DEDEDE] shadow-lg max-w-[340px] rounded-[8px]"
+						>
+							<img src="./images/card-latest-2.png" alt="card image" />
+							<div class="bg-white px-[24px] py-[24px]">
+								<p
+									class="font-normal text-[16px] text-[#22343D] leading-[28px] mb-[12px]"
+								>
+									By
+									<span
+										class="font-bold text-[16px] text-[#22343D] leading-[28px]"
+										>Wahid Ari</span
+									>
+									| 03 March 2019
+								</p>
+								<h3 class="font-bold text-[24px] text-[#22343D] leading-[40px]">
+									Increasing Prosperity With Positive Thinking
+								</h3>
+							</div>
+						</li>
+						<li
+							class="mx-auto lg:mx-0 border border-[#DEDEDE] shadow-lg max-w-[340px] rounded-[8px]"
+						>
+							<img src="./images/card-latest-3.png" alt="card image" />
+							<div class="bg-white px-[24px] py-[24px]">
+								<p
+									class="font-normal text-[16px] text-[#22343D] leading-[28px] mb-[12px]"
+								>
+									By
+									<span
+										class="font-bold text-[16px] text-[#22343D] leading-[28px]"
+										>Wahid Ari</span
+									>
+									| 03 March 2019
+								</p>
+								<h3 class="font-bold text-[24px] text-[#22343D] leading-[40px]">
+									Increasing Prosperity With Positive Thinking
+								</h3>
+							</div>
+						</li>
+						<li
+							class="mx-auto lg:mx-0 border border-[#DEDEDE] shadow-lg max-w-[340px] rounded-[8px]"
+						>
+							<img src="./images/card-latest-4.png" alt="card image" />
+							<div class="bg-white px-[24px] py-[24px]">
+								<p
+									class="font-normal text-[16px] text-[#22343D] leading-[28px] mb-[12px]"
+								>
+									By
+									<span
+										class="font-bold text-[16px] text-[#22343D] leading-[28px]"
+										>Wahid Ari</span
+									>
+									| 03 March 2019
+								</p>
+								<h3 class="font-bold text-[24px] text-[#22343D] leading-[40px]">
+									Increasing Prosperity With Positive Thinking
+								</h3>
+							</div>
+						</li>
+						<li
+							class="mx-auto lg:mx-0 border border-[#DEDEDE] shadow-lg max-w-[340px] rounded-[8px]"
+						>
+							<img src="./images/card-latest-5.png" alt="card image" />
+							<div class="bg-white px-[24px] py-[24px]">
+								<p
+									class="font-normal text-[16px] text-[#22343D] leading-[28px] mb-[12px]"
+								>
+									By
+									<span
+										class="font-bold text-[16px] text-[#22343D] leading-[28px]"
+										>Wahid Ari</span
+									>
+									| 03 March 2019
+								</p>
+								<h3 class="font-bold text-[24px] text-[#22343D] leading-[40px]">
+									Increasing Prosperity With Positive Thinking
+								</h3>
+							</div>
+						</li>
+						<li
+							class="mx-auto lg:mx-0 border border-[#DEDEDE] shadow-lg max-w-[340px] rounded-[8px]"
+						>
+							<img src="./images/card-latest-6.png" alt="card image" />
+							<div class="bg-white px-[24px] py-[24px]">
+								<p
+									class="font-normal text-[16px] text-[#22343D] leading-[28px] mb-[12px]"
+								>
+									By
+									<span
+										class="font-bold text-[16px] text-[#22343D] leading-[28px]"
+										>Wahid Ari</span
+									>
+									| 03 March 2019
+								</p>
+								<h3 class="font-bold text-[24px] text-[#22343D] leading-[40px]">
+									Increasing Prosperity With Positive Thinking
+								</h3>
+							</div>
+						</li>
+					</ul>
+					<a
+						class="flex items-center gap-[8px] justify-center dark:text-white"
+						href="#"
+					>
+						<span
+							class="font-medium dark:text-white text-[18px] text-[#22343D] leading-[26px]"
+							>More stories</span
+						>
+						<svg
+							width="21"
+							height="20"
+							viewBox="0 0 21 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M11.67 11H5.5V9H11.67L9.09 6.41L10.5 5L15.5 10L10.5 15L9.09 13.59L11.67 11Z"
+								fill="currentColor"
+							/>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M0.5 10C0.5 4.47715 4.97715 -4.82823e-07 10.5 0C16.0228 4.82823e-07 20.5 4.47715 20.5 10C20.5 15.5228 16.0228 20 10.5 20C4.97715 20 0.5 15.5228 0.5 10ZM2.5 10C2.5 5.58172 6.08172 2 10.5 2C14.9183 2 18.5 5.58172 18.5 10C18.5 14.4183 14.9183 18 10.5 18C6.08172 18 2.5 14.4183 2.5 10Z"
+								fill="currentColor"
+							/>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<section class="mb-[50px]">
+				<div class="containers">
+					<div class="text-center">
+						<h2
+							class="font-bold dark:text-white text-[34px] text-[#252B42] leading-[57px] mb-[17px]"
+						>
+							Contact Us
+						</h2>
+						<p
+							class="font-medium dark:text-white text-[18px] leading-[28px] mb-[65px]"
+						>
+							Need more detailed information? Get in touch with us.
+						</p>
+					</div>
+					<div class="flex gap-[16px] justify-center mb-[55px]">
+						<a href="https://www.instagram.com/" target="_blank"
+							><svg
+								width="40"
+								height="41"
+								viewBox="0 0 40 41"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="20" cy="20.0161" r="20" fill="#EDFFFC" />
+								<path
+									d="M25 10.0161H15C12.2386 10.0161 10 12.2547 10 15.0161V25.0161C10 27.7775 12.2386 30.0161 15 30.0161H25C27.7614 30.0161 30 27.7775 30 25.0161V15.0161C30 12.2547 27.7614 10.0161 25 10.0161Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M24 19.3859C24.1234 20.2182 23.9812 21.0681 23.5937 21.8149C23.2062 22.5617 22.5931 23.1673 21.8416 23.5456C21.0901 23.9239 20.2384 24.0555 19.4077 23.9219C18.5771 23.7882 17.8097 23.396 17.2148 22.8011C16.6199 22.2062 16.2277 21.4388 16.094 20.6081C15.9604 19.7775 16.092 18.9258 16.4703 18.1743C16.8485 17.4228 17.4541 16.8097 18.2009 16.4222C18.9477 16.0347 19.7977 15.8925 20.63 16.0159C21.4789 16.1418 22.2648 16.5374 22.8716 17.1442C23.4785 17.7511 23.8741 18.537 24 19.3859Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M25.5 14.5161H25.51"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="https://www.facebook.com/" target="_blank"
+							><svg
+								width="40"
+								height="40"
+								viewBox="0 0 40 40"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+								<path
+									d="M26 10H23C21.6739 10 20.4021 10.5268 19.4645 11.4645C18.5268 12.4021 18 13.6739 18 15V18H15V22H18V30H22V22H25L26 18H22V15C22 14.7348 22.1054 14.4804 22.2929 14.2929C22.4804 14.1054 22.7348 14 23 14H26V10Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="https://x.com/" target="_blank"
+							><svg
+								width="40"
+								height="40"
+								viewBox="0 0 40 40"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+								<path
+									d="M31 11.0101C30.0424 11.6855 28.9821 12.2022 27.86 12.5401C27.2577 11.8476 26.4573 11.3567 25.567 11.134C24.6767 10.9112 23.7395 10.9673 22.8821 11.2945C22.0247 11.6218 21.2884 12.2045 20.773 12.9638C20.2575 13.7231 19.9877 14.6224 20 15.5401V16.5401C18.2426 16.5856 16.5013 16.1959 14.931 15.4055C13.3607 14.6151 12.0103 13.4487 11 12.0101C11 12.0101 7 21.0101 16 25.0101C13.9405 26.408 11.4872 27.109 9 27.0101C18 32.0101 29 27.0101 29 15.5101C28.9991 15.2315 28.9723 14.9537 28.92 14.6801C29.9406 13.6735 30.6608 12.4028 31 11.0101V11.0101Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+					</div>
+					<img
+						class="mx-auto"
+						src="./images/screen-card.png"
+						alt="card image"
+					/>
+				</div>
+			</section>
+			<section class="mb-[150px]">
+				<div
+					class="containers py-[52px] border border-[#DDDDDD] rounded-[20px] dark:bg-[#22343D] dark:border-[#464646]"
+				>
+					<h2
+						class="font-bold dark:text-white text-[24px] text-[#252B42] leading-[33px] mb-[45px] text-center"
+					>
+						Send a message
+					</h2>
+					<form class="flex flex-col gap-[45px]" method="post">
+						<input
+							class="border border-[#E8E8E8] py-[19px] pl-[20px] rounded-[39px] bg-[#F5F5F5] outline-none"
+							type="text"
+							placeholder="Your name"
+						/>
+						<input
+							class="border border-[#E8E8E8] py-[19px] pl-[20px] rounded-[39px] bg-[#F5F5F5] outline-none"
+							type="email"
+							placeholder="Your email"
+						/>
+						<textarea
+							name=""
+							class="border border-[#E8E8E8] py-[19px] pl-[20px] bg-[#F5F5F5] outline-none h-[193px] h-[100px] max-h-[193px] resize-none"
+							placeholder="Your text"
+						></textarea>
+						<button
+							class="flex justify-start py-[18px] px-[54px] bg-[#02897A] font-medium text-[16px] text-white leading-[16px] rounded-[35px] border border-transparent hover:border-[#E8E8E8] hover:text-[#22343D] hover:bg-white duration-300 w-[145px]"
+							type="submit"
+						>
+							Send
+						</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="pb-[46px]">
+			<div
+				class="containers flex flex-col text-center lg:text-start lg:flex-row justify-between mb-[44px] lg:mb-[10px] px-[43px] px-0"
+			>
+				<div class="mx-auto lg:mx-0 mb-[32px] lg:mb-0">
+					<a class="flex gap-[16px] items-center mb-[24px]" href="/">
+						<img
+							src="./images/site-logo.svg"
+							alt="Site logo image"
+							width="40"
+							height="36"
+						/>
+						<span
+							class="font-bold dark:text-white text-[30px] text-[#173A56] leading-[28px]"
+							>Product</span
+						>
+					</a>
+					<div class="flex gap-[16px]">
+						<a href="https://www.instagram.com/" target="_blank"
+							><svg
+								width="40"
+								height="41"
+								viewBox="0 0 40 41"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="20" cy="20.0161" r="20" fill="#EDFFFC" />
+								<path
+									d="M25 10.0161H15C12.2386 10.0161 10 12.2547 10 15.0161V25.0161C10 27.7775 12.2386 30.0161 15 30.0161H25C27.7614 30.0161 30 27.7775 30 25.0161V15.0161C30 12.2547 27.7614 10.0161 25 10.0161Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M24 19.3859C24.1234 20.2182 23.9812 21.0681 23.5937 21.8149C23.2062 22.5617 22.5931 23.1673 21.8416 23.5456C21.0901 23.9239 20.2384 24.0555 19.4077 23.9219C18.5771 23.7882 17.8097 23.396 17.2148 22.8011C16.6199 22.2062 16.2277 21.4388 16.094 20.6081C15.9604 19.7775 16.092 18.9258 16.4703 18.1743C16.8485 17.4228 17.4541 16.8097 18.2009 16.4222C18.9477 16.0347 19.7977 15.8925 20.63 16.0159C21.4789 16.1418 22.2648 16.5374 22.8716 17.1442C23.4785 17.7511 23.8741 18.537 24 19.3859Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M25.5 14.5161H25.51"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="https://www.facebook.com/" target="_blank"
+							><svg
+								width="40"
+								height="40"
+								viewBox="0 0 40 40"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+								<path
+									d="M26 10H23C21.6739 10 20.4021 10.5268 19.4645 11.4645C18.5268 12.4021 18 13.6739 18 15V18H15V22H18V30H22V22H25L26 18H22V15C22 14.7348 22.1054 14.4804 22.2929 14.2929C22.4804 14.1054 22.7348 14 23 14H26V10Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="https://x.com/" target="_blank"
+							><svg
+								width="40"
+								height="40"
+								viewBox="0 0 40 40"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+								<path
+									d="M31 11.0101C30.0424 11.6855 28.9821 12.2022 27.86 12.5401C27.2577 11.8476 26.4573 11.3567 25.567 11.134C24.6767 10.9112 23.7395 10.9673 22.8821 11.2945C22.0247 11.6218 21.2884 12.2045 20.773 12.9638C20.2575 13.7231 19.9877 14.6224 20 15.5401V16.5401C18.2426 16.5856 16.5013 16.1959 14.931 15.4055C13.3607 14.6151 12.0103 13.4487 11 12.0101C11 12.0101 7 21.0101 16 25.0101C13.9405 26.408 11.4872 27.109 9 27.0101C18 32.0101 29 27.0101 29 15.5101C28.9991 15.2315 28.9723 14.9537 28.92 14.6801C29.9406 13.6735 30.6608 12.4028 31 11.0101V11.0101Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="mx-auto lg:mx-0 mb-[32px] lg:mb-0">
+					<strong
+						class="font-medium dark:text-white text-[20px] text-[#22343D] leading-[30px] block mb-[8px]"
+					>
+						Resource
+					</strong>
+					<ul class="">
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#">About Us</a>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#">Blog</a>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#">Contact</a>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#">FAQ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mx-auto lg:mx-0 mb-[32px] lg:mb-0">
+					<strong
+						class="font-medium dark:text-white text-[20px] text-[#22343D] leading-[30px] block mb-[8px]"
+						>Legal Stuff</strong
+					>
+					<ul class="">
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#"
+								>Disclaimer</a
+							>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#"
+								>Financing</a
+							>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#"
+								>Privacy Policy</a
+							>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#"
+								>Terms of Service</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="max-w-[325px] mx-auto lg:mx-0">
+					<p
+						class="font-medium dark:text-white text-[20px] text-[#22343D] leading-[30px] mb-[34px] lg:mb-[30px]"
+					>
+						knowing you're always on the best energy deal.
+					</p>
+					<form method="post">
+						<input
+							required
+							autocomplete="off"
+							name="Email"
+							type="email"
+							placeholder="Your email"
+							class="border-[1px] border-[#BCD0E5] rounded-[4px] py-[10px] pl-[15px] shadow-lg mb-[21px] outline-none font-semibold text-[15px]"
+						/>
+						<button
+							type="submit"
+							class="font-bold text-[16px] text-white bg-[#02897A] py-[8px] px-[15px] rounded-[4px] border-[1px] border-transparent hover:bg-white hover:text-[#22343D] hover:border-[#BCD0E5] duration-300"
+						>
+							Sign up Now
+						</button>
+					</form>
+				</div>
+			</div>
+			<div
+				class="flex justify-center text-center lg:text-start font-normal dark:text-white text-[16px] text-[#22343D] leading-[30px] px-[25px]"
+			>
+				Made With Love By Figmaland All Right Reserved
+			</div>
+		</footer>
+		<script src="./js/script.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				darkMode: 'class',
+				theme: {
+					extend: {},
+				},
+			}
+		</script>
+	</body>
+</html>

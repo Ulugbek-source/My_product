@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="icon" href="./images/site-logo.svg" />
+		<title>My Product</title>
+		<style type="text/tailwindcss">
+			@layer utilities {
+			}
+		</style>
+	</head>
+	<body
+		class="bg-white dark:bg-[#1F2E35] text-black transition-colors duration-300"
+	>
+		<header
+			class="pt-[19px] pb-[24px] fixed w-full top-0 z-[999] dark:bg-[#1F2E35] bg-white"
+		>
+			<div class="containers flex items-center justify-between">
+				<a class="flex gap-[16px] items-center" href="/">
+					<img
+						src="./images/site-logo.svg"
+						alt="Site logo image"
+						width="40"
+						height="36"
+					/>
+					<span
+						class="font-bold dark:text-white text-[30px] text-[#173A56] leading-[28px]"
+						>Product</span
+					>
+				</a>
+				<div class="flex gap-[24px] items-center">
+					<nav class="hidden lg:flex flex gap-[25px]">
+						<a
+							class="font-medium hover:font-semibold dark:text-white text-[#22343D] text-[16px] leading-[28px]"
+							href="#product"
+							>Product</a
+						>
+						<a
+							class="font-medium hover:font-semibold dark:text-white text-[#22343D] text-[16px] leading-[28px]"
+							href="#customer"
+							>Customers</a
+						>
+						<a
+							class="font-medium hover:font-semibold dark:text-white text-[#22343D] text-[16px] leading-[28px]"
+							href="#price"
+							>Pricing</a
+						>
+						<a
+							class="font-medium hover:font-semibold dark:text-white text-[#22343D] text-[16px] leading-[28px]"
+							href="#resource"
+							>Resources</a
+						>
+					</nav>
+					<button
+						class="hidden md:flex font-semibold dark:text-white text-[16px] text-[#173A56] hover:bg-[#02897A] hover:text-[#FFFFFF] duration-300 py-[10px] pl-[25px] pr-[22px] border-[1px] border-[#BCD0E5] rounded-[4px]"
+					>
+						Sign In
+					</button>
+					<button
+						class="hidden md:flex font-semibold text-[16px] text-[#FFFFFF] py-[10px] pl-[25px] pr-[23px] hover:bg-[#FFFFFF] hover:text-[#173A56] hover:border-[#BCD0E5] duration-300 bg-[#02897A] border-[1px] border-transparent rounded-[4px]"
+					>
+						Sign Up
+					</button>
+					<button id="toggleMode" class="btn">
+						<svg
+							width="32"
+							height="32"
+							viewBox="0 0 32 32"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect width="32" height="32" rx="16" fill="#F3F3F3" />
+							<path
+								d="M16 26C21.514 26 26 21.514 26 16C26 10.486 21.514 6 16 6C10.486 6 6 10.486 6 16C6 21.514 10.486 26 16 26ZM16 8C20.411 8 24 11.589 24 16C24 20.411 20.411 24 16 24C11.589 24 8 20.411 8 16C8 11.589 11.589 8 16 8Z"
+								fill="#02897A"
+							/>
+							<path
+								d="M23 16C23 12.134 19.865 9 16 9V23C19.865 23 23 19.866 23 16Z"
+								fill="#02897A"
+							/>
+						</svg>
+					</button>
+
+					<button id="menu-btn" class="lg:hidden">
+						<img src="./images/menu-icon.svg" alt="menu icon" />
+					</button>
+				</div>
+			</div>
+		</header>
+		<div
+			id="sidebar"
+			class="fixed top-0 right-0 h-full w-2/3 sm:w-1/2 bg-[#1F2E35] text-white transform translate-x-full transition-transform duration-300 ease-in-out z-[99999]"
+		>
+			<button id="close-btn" class="absolute top-[30px] right-[30px]">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					height="24px"
+					viewBox="0 -960 960 960"
+					width="24px"
+					fill="#e3e3e3"
+				>
+					<path
+						d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+					/>
+				</svg>
+			</button>
+
+			<nav
+				class="mt-24 ml-8 space-y-8 text-lg tracking-widest font-light uppercase"
+			>
+				<a href="#product" class="block">Product </a>
+				<a href="#customer" class="block">Customers </a>
+				<a href="/#price" class="block"> Pricing</a>
+				<a href="#resource" class="block"> Resources </a>
+			</nav>
+		</div>
+		<main class="mt-[80px]">
+			<section class="pt-[29px] pb-[99px] md:pt-[25px] md:pb-[114px]">
+				<div class="containers flex flex-col-reverse xl:flex-row">
+					<div
+						class="pt-[80px] xl:pt-[145px] max-w-[518px] text-center xl:text-start mx-auto"
+					>
+						<h2
+							class="font-bold dark:text-white text-[36px] md:text-[40px] text-[#22343D] leading-[60px] mb-[16px] md:mb-[18px]"
+						>
+							Work at the speed of thought
+						</h2>
+						<p
+							class="font-normal dark:text-white text-[18px] text-[#22343D] leading-[28px] mb-[32px] md:mb-[45px]"
+						>
+							Tools, tutorials, design and innovation experts, all in one place!
+							The most intuitive way to imagine your next user experience.
+						</p>
+						<div
+							class="flex gap-[28px] md:gap-[50px] xl:gap-[30px] justify-center xl:justify-start"
+						>
+							<button
+								class="font-semibold text-[16px] text-[#FFFFFF] px-[20px] py-[15px] md:px-[41px] hover:bg-white hover:text-[#173A56] hover:border-[#BCD0E5] duration-300 bg-[#02897A] rounded-[4px] border-[1px] border-transparent"
+							>
+								Get started
+							</button>
+							<button class="flex items-center gap-[8.5px] text-[#02897A]">
+								<svg
+									width="17"
+									height="19"
+									viewBox="0 0 17 19"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M15.8516 8.53032C16.591 8.96531 16.591 10.0347 15.8516 10.4697L2.1954 18.5027C1.44543 18.9439 0.5 18.4031 0.5 17.533V1.46697C0.5 0.596876 1.44543 0.0561381 2.1954 0.497293L15.8516 8.53032Z"
+										fill="currentColor"
+										#02897A
+									/>
+								</svg>
+								<span
+									class="font-semibold text-[16px] text-[#02897A] relative inline-block after:block after:h-[2px] after:bg-[#02897A] after:transition-all after:duration-500 after:absolute after:left-0 after:bottom-0 after:w-full hover:after:w-0 hover:after:left-0"
+									>Watch the Video</span
+								>
+							</button>
+						</div>
+					</div>
+					<img
+						class="mx-auto"
+						src="./images/hero-section-img.png"
+						alt="Hero image"
+						width="600"
+						height="555"
+					/>
+				</div>
+			</section>
+			<section id="product" class="product pb-[100px] lg:pb-[90px]">
+				<div class="containers">
+					<h2
+						class="font-bold dark:text-white text-[32px] text-[#22343D] max-w-[538px] text-center mx-auto mb-[57px]"
+					>
+						Product was Built Specifically for You
+					</h2>
+					<ul
+						class="flex flex-col lg:flex-row gap-[32px] lg:gap-[46px] justify-center mb-[34px]"
+					>
+						<li
+							class="sm:w-full text-center lg:w-[240px] lg:text-start transition-transform duration-300 hover:scale-110"
+						>
+							<div class="mb-[30px] flex justify-center lg:justify-start">
+								<img
+									src="./images/product-section-card-img.png"
+									alt="Card image"
+								/>
+							</div>
+							<h3
+								class="font-semibold dark:text-white text-[22px] text-[#22343D] mb-[13px]"
+							>
+								First click tests
+							</h3>
+							<p
+								class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px]"
+							>
+								While most people enjoy casino gambling,
+							</p>
+						</li>
+						<li
+							class="sm:w-full text-center lg:text-start lg:w-[240px] transition-transform duration-300 hover:scale-110"
+						>
+							<div class="mb-[30px] flex justify-center lg:justify-start">
+								<img
+									src="./images/product-section-card-img2.png"
+									alt="Card image"
+								/>
+							</div>
+							<h3
+								class="font-semibold dark:text-white text-[22px] text-[#22343D] mb-[13px]"
+							>
+								Design surveys
+							</h3>
+							<p
+								class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px]"
+							>
+								Sports betting, lottery and bingo playing for the fun
+							</p>
+						</li>
+						<li
+							class="sm:w-full text-center lg:text-start lg:w-[240px] transition-transform duration-300 hover:scale-110"
+						>
+							<div class="mb-[30px] flex justify-center lg:justify-start">
+								<img
+									src="./images/product-section-card-img3.png"
+									alt="Card image"
+								/>
+							</div>
+							<h3
+								class="font-semibold dark:text-white text-[22px] text-[#22343D] mb-[13px]"
+							>
+								Preference tests
+							</h3>
+							<p
+								class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px]"
+							>
+								The Myspace page defines the individual.
+							</p>
+						</li>
+						<li
+							class="sm:w-full text-center lg:text-start lg:w-[240px] transition-transform duration-300 hover:scale-110"
+						>
+							<div class="mb-[30px] flex justify-center lg:justify-start">
+								<img
+									src="./images/product-section-card-img4.png"
+									alt="Card image"
+								/>
+							</div>
+							<h3
+								class="font-semibold dark:text-white text-[22px] text-[#22343D] mb-[13px]"
+							>
+								Five second tests
+							</h3>
+							<p
+								class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px]"
+							>
+								Personal choices and the overall personality of the person.
+							</p>
+						</li>
+					</ul>
+					<div class="flex justify-center">
+						<button
+							class="font-bold text-[16px] text-[#FFFFFF] px-[25px] py-[15px] md:px-[32px] hover:bg-white hover:text-[#173A56] hover:border-[#BCD0E5] duration-300 bg-[#02897A] rounded-[4px] border-[1px] border-transparent"
+						>
+							SIGN UP NOW
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="pb-[100px] lg:py-[150px]">
+				<div
+					class="containers flex flex-col-reverse lg:flex-row gap-[50px] lg:gap-[84px]"
+				>
+					<div
+						class="max-w-[486px] sm:mx-auto sm:text-start md:text-center lg:text-start"
+					>
+						<strong
+							class="font-semibold dark:text-white text-[16px] text-[#22343D] block mb-[8px]"
+							>Effortless Validation for</strong
+						>
+						<h2
+							class="font-bold dark:text-white text-[32px] text-[#22343D] mb-[16px] lg:mb-[131px]"
+						>
+							Management
+						</h2>
+						<p
+							class="block lg:hidden font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px] mb-[16px]"
+						>
+							The Myspace page defines the individual, his or her
+							characteristics, traits, personal choices and the overall
+							personality of the person.
+						</p>
+						<strong
+							class="font-semibold dark:text-white text-[16px] text-[#22343D] leading-[26px] block mb-[12px]"
+							>Accessory makers</strong
+						>
+						<p
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px] mb-0 lg:mb-[25px]"
+						>
+							While most people enjoy casino gambling, sports betting, lottery
+							and bingo playing for the fun
+						</p>
+						<strong
+							class="font-semibold dark:text-white text-[16px] text-[#22343D] leading-[26px] block mb-[12px]"
+							>Alterationists</strong
+						>
+						<p
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px] mb-[3px] lg:mb-[19px]"
+						>
+							If you are looking for a new way to promote your business that
+							won’t cost you more money,
+						</p>
+					</div>
+					<img
+						class="mx-auto"
+						src="./images/management-section-img.png"
+						alt="Management image"
+						width="541"
+						height="451"
+					/>
+				</div>
+			</section>
+			<section id="customer" class="pb-[100px] lg:pb-[150px]">
+				<div
+					class="containers flex flex-col lg:flex-row gap-[50px] lg:gap-[94px]"
+				>
+					<img
+						class="mx-auto lg:mx-0"
+						src="./images/customers-section-img.png"
+						alt="Customers section image"
+						width="543"
+						height="500"
+					/>
+					<div
+						class="max-w-[486px] sm:mx-auto sm:text-start md:text-center lg:text-start"
+					>
+						<strong
+							class="font-semibold dark:text-white text-[16px] text-[#22343D] block mb-[8px]"
+							>Easier decision making for</strong
+						>
+						<h2
+							class="font-bold dark:text-white text-[32px] text-[#22343D] mb-[15px] lg:mb-[23px]"
+						>
+							Customer Support
+						</h2>
+						<p
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px] mb-[16px] lg:mb-[30px]"
+						>
+							The Myspace page defines the individual, his or her
+							characteristics, traits, personal choices and the overall
+							personality of the person.
+						</p>
+						<ul class="flex flex-col gap-[16px] lg:gap-[30px]">
+							<li class="flex gap-[30px] items-center">
+								<img
+									src="./images/customers-section-img2.png"
+									alt="Customers section image check mark"
+								/>
+								<p
+									class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px]"
+								>
+									Never worry about overpaying for your energy again.
+								</p>
+							</li>
+							<li class="flex gap-[30px] items-center">
+								<img
+									src="./images/customers-section-img3.png"
+									alt="Customers section image check mark"
+								/>
+								<p
+									class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px]"
+								>
+									We will only switch you to energy companies that we trust and
+									will treat you right
+								</p>
+							</li>
+							<li class="flex gap-[30px] items-center">
+								<img
+									src="./images/customers-section-img4.png"
+									alt="Customers section image check mark"
+								/>
+								<p
+									class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px]"
+								>
+									We track the markets daily and know where the savings are.
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="pb-[80px] lg:pb-[150px]">
+				<div class="containers flex flex-col-reverse lg:flex-row gap-[84px]">
+					<div
+						class="max-w-[486px] sm:mx-auto sm:text-start md:text-center lg:text-start"
+					>
+						<strong
+							class="font-semibold dark:text-white text-[16px] text-[#22343D] block mb-[8px]"
+							>Optimisation for</strong
+						>
+						<h2
+							class="font-bold dark:text-white text-[32px] text-[#22343D] mb-[16px] lg:mb-[23px]"
+						>
+							Collaborative
+						</h2>
+						<p
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px] mb-[16px] lg:mb-[30px]"
+						>
+							Few would argue that, despite the advancements of feminism over
+							the past three decades, women still face a double standard when it
+							comes to their behavior.
+						</p>
+						<strong
+							class="font-semibold dark:text-white text-[16px] text-[#22343D] leading-[26px] block mb-[12px]"
+							>Accessory makers</strong
+						>
+						<p
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px] mb-[25px]"
+						>
+							While most people enjoy casino gambling, sports betting, lottery
+							and bingo playing for the fun
+						</p>
+						<strong
+							class="font-semibold dark:text-white text-[16px] text-[#22343D] leading-[26px] block mb-[12px]"
+							>Alterationists</strong
+						>
+						<p
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[26px]"
+						>
+							If you are looking for a new way to promote your business that
+							won’t cost you more money,
+						</p>
+					</div>
+					<img
+						class="mx-auto lg:mx-0"
+						src="./images/collaborative-section-img.png"
+						alt="Collaborative section image"
+						width="541"
+						height="451"
+					/>
+				</div>
+			</section>
+			<section id="resource" class="pb-[150px] quick">
+				<div class="containers">
+					<div class="max-w-[542px] mx-auto text-center mb-[32px] pt-[52px]">
+						<h2
+							class="font-bold dark:text-white text-[32px] text-[#22343D] mb-[12px]"
+						>
+							Quick & Easy Process
+						</h2>
+						<p
+							class="font-medium dark:text-white text-[16px] text-[#22343D] leading-[26px]"
+						>
+							Do you require some help for your project: Conception workshop,
+							prototyping, marketing strategy, landing page, Ux/UI?
+						</p>
+					</div>
+					<div
+						class="flex flex-col lg:flex-row gap-[32px] lg:gap-[191px] mb-[48px] justify-center"
+					>
+						<ul class="mx-auto gap-[32px] lg:gap-[24px]">
+							<li class="flex items-center gap-[16px]">
+								<img src="./images/quick-ava.svg" alt="ava" />
+								<p
+									class="font-medium dark:bg-white pt-[15px] pb-[15px] px-[25px] rounded-[26px] shadow-lg text-[16px] text-[#2F281E]"
+								>
+									I can take care of your pitch
+								</p>
+							</li>
+							<li class="flex items-center gap-[16px] justify-end">
+								<p
+									class="font-medium dark:bg-white pt-[15px] pb-[15px] px-[25px] rounded-[26px] shadow-lg text-[16px] text-[#2F281E]"
+								>
+									I can design you website
+								</p>
+								<img src="./images/quick-ava2.svg" alt="ava 2" />
+							</li>
+						</ul>
+						<ul
+							class="flex flex-col-reverse gap-[32px] lg:gap-[24px] lg:flex-col mx-auto"
+						>
+							<li class="flex items-center gap-[16px] justify-end">
+								<p
+									class="font-medium dark:bg-white pt-[15px] pb-[15px] px-[25px] rounded-[26px] shadow-lg text-[16px] text-[#2F281E]"
+								>
+									I can prototype your app
+								</p>
+								<img src="./images/quick-ava3.svg" alt="ava 3" />
+							</li>
+							<li class="flex items-center gap-[16px]">
+								<img src="./images/quick-ava4.svg" alt="ava 4" />
+								<p
+									class="font-medium dark:bg-white pt-[15px] pb-[15px] px-[25px] rounded-[26px] shadow-lg text-[16px] text-[#2F281E]"
+								>
+									I can help marketing strategy
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="flex justify-center">
+						<button
+							class="font-bold text-[16px] text-[#FFFFFF] px-[25px] py-[15px] md:px-[31px] hover:bg-white hover:text-[#173A56] hover:border-[#BCD0E5] duration-300 bg-[#02897A] rounded-[4px] border-[1px] border-transparent"
+						>
+							Contact our expert
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="pb-[150px]">
+				<div class="containers">
+					<h2
+						class="font-bold dark:text-white text-[34px] text-[#22343D] mb-[8px] text-center lg:text-start"
+					>
+						Contents Strategies
+					</h2>
+					<p
+						class="font-medium dark:text-white text-[16px] text-[#22343D] leading-[26px] mb-[33px] text-center lg:text-start"
+					>
+						We focus on ergonomics and meeting you where you work. It's only a
+						keystroke away.
+					</p>
+					<ul class="flex flex-col lg:flex-row gap-[32px] justify-center">
+						<li
+							class="mx-auto w-full max-w-[348px] border border-[#DEDEDE] rounded-[8px] transition-transform duration-300 hover:scale-110"
+						>
+							<img src="./images/content-card-img1.png" alt="Card image" />
+							<div class="dark:bg-white pt-[24px] px-[24px] pb-[40px]">
+								<p
+									class="font-normal text-[#22343D] text-[16px] leading-[28px] mb-3"
+								>
+									By <span class="font-bold">Wahid Ari</span> | 03 March 2019
+								</p>
+								<h2
+									class="font-bold text-[#22343D] hover:text-[#02897A] duration-300 text-[24px] leading-[40px]"
+								>
+									Increasing Prosperity With Positive Thinking
+								</h2>
+							</div>
+						</li>
+						<li
+							class="mx-auto w-full max-w-[348px] border border-[#DEDEDE] rounded-[8px] transition-transform duration-300 hover:scale-110"
+						>
+							<img src="./images/content-card-img2.png" alt="Card image" />
+							<div class="dark:bg-white pt-[24px] px-[24px] pb-[40px]">
+								<p
+									class="font-normal text-[#22343D] text-[16px] leading-[28px] mb-[12px]"
+								>
+									By <span class="font-bold">Wahid Ari</span> | 03 March 2019
+								</p>
+								<h2
+									class="font-bold text-[#22343D] hover:text-[#02897A] duration-300 text-[24px] leading-[40px]"
+								>
+									Motivation Is The First Step To Success
+								</h2>
+							</div>
+						</li>
+						<li
+							class="mx-auto w-full max-w-[348px] border border-[#DEDEDE] rounded-[8px] transition-transform duration-300 hover:scale-110"
+						>
+							<img src="./images/content-card-img3.png" alt="Card image" />
+							<div class="dark:bg-white pt-[24px] px-[24px] pb-[40px]">
+								<p
+									class="font-normal text-[#22343D] text-[16px] leading-[28px] mb-[12px]"
+								>
+									By <span class="font-bold">Wahid Ari</span> | 03 March 2019
+								</p>
+								<h2
+									class="font-bold text-[#22343D] hover:text-[#02897A] duration-300 text-[24px] leading-[40px]"
+								>
+									Success Steps For Your Personal Or Business
+								</h2>
+							</div>
+						</li>
+					</ul>
+					<div class="flex gap-[10px] mt-[64px] justify-center">
+						<a
+							class="w-[16px] h-[16px] bg-[#EFEFEF] hover:bg-[#02897A] duration-300 rounded-[50%]"
+							href="./price.html"
+						>
+						</a>
+						<a
+							class="w-[16px] h-[16px] bg-[#EFEFEF] hover:bg-[#02897A] duration-300 rounded-[50%]"
+							href="./client.html"
+						>
+						</a>
+						<a
+							class="w-[16px] h-[16px] bg-[#EFEFEF] hover:bg-[#02897A] duration-300 rounded-[50%]"
+							href="./buisness.html"
+						>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section id="price" class="pb-[99px] md:pb-[150px]">
+				<div class="containers">
+					<h2
+						class="font-bold dark:text-white text-[34px] text-[#22343D] mb-[8px] text-center"
+					>
+						Price Table
+					</h2>
+					<p
+						class="font-medium dark:text-white text-[16px] text-[#22343D] mb-[50px] text-center"
+					>
+						We offer competitive price
+					</p>
+					<ul class="flex flex-col lg:flex-row justify-center gap-[32px]">
+						<li
+							class="dark:bg-white mx-auto w-full max-w-[322px] text-center p-8 space-y-4 border border-gray-200 dark:border-gray-600 shadow-lg transition-transform duration-300 hover:scale-110"
+						>
+							<h3 class="text-xl font-bold text-[#22343D]">Free</h3>
+							<p class="text-[#6B7280] text-sm">Brief price description</p>
+
+							<div class="flex gap-[8px] justify-center items-center mb-[40px]">
+								<p class="font-bold text-[76px] text-[#02897A] leading-[100px]">
+									0
+								</p>
+								<div class="flex flex-col items-start">
+									<span
+										class="font-bold text-[24px] text-[#02897A] leading-[30px]"
+										>$</span
+									>
+									<span
+										class="font-normal text-[16px] text-[#AFAFAF] leading-[19px]"
+										>Per / month</span
+									>
+								</div>
+							</div>
+
+							<ul class="flex flex-col gap-[16px]">
+								<li
+									class="font-medium text-[16px] text-[#22343D] leading-[22px]"
+								>
+									Only 2 Operators
+								</li>
+								<li
+									class="font-medium text-[16px] text-[#22343D] leading-[22px]"
+								>
+									Notifications
+								</li>
+								<li
+									class="font-medium text-[16px] text-[#22343D] leading-[22px]"
+								>
+									Landing Pages
+								</li>
+							</ul>
+
+							<div class="pt-[38px]">
+								<button
+									class="bg-[#02897A] text-white font-semibold py-[11px] px-[19px] border-[1px] border-transparent rounded-[8px] hover:bg-[#FFFFFF] hover:text-[#22343D] hover:border-[#BCD0E5] duration-300"
+								>
+									Order Now
+								</button>
+							</div>
+						</li>
+						<li
+							class="mx-auto w-full max-w-[322px] text-center p-8 space-y-4 border border-gray-200 dark:border-gray-600 shadow-lg bg-[#02897A] transition-transform duration-300 hover:scale-110"
+						>
+							<h3 class="text-xl font-bold text-[#FFFFFF]">Standard</h3>
+							<p class="text-[#FFFFFF] text-sm">Brief price description</p>
+
+							<div class="flex gap-[8px] justify-center items-center mb-[40px]">
+								<p class="font-bold text-[76px] text-[#FFFFFF] leading-[100px]">
+									5
+								</p>
+								<div class="flex flex-col items-start">
+									<span
+										class="font-bold text-[24px] text-[#FFFFFF] leading-[30px]"
+										>$</span
+									>
+									<span
+										class="font-normal text-[16px] text-[#E0E0E0] leading-[19px]"
+										>Per / month</span
+									>
+								</div>
+							</div>
+
+							<ul class="flex flex-col gap-[16px]">
+								<li
+									class="font-medium text-[16px] text-[#FFFFFF] leading-[22px]"
+								>
+									5+ Operators
+								</li>
+								<li
+									class="font-medium text-[16px] text-[#FFFFFF] leading-[22px]"
+								>
+									Notifications
+								</li>
+								<li
+									class="font-medium text-[16px] text-[#FFFFFF] leading-[22px]"
+								>
+									Landing Pages
+								</li>
+							</ul>
+
+							<div class="pt-[38px]">
+								<button
+									class="bg-[#FFFFFF] text-[#02897A] font-semibold py-[11px] px-[19px] border-[1px] border-transparent rounded-[8px] hover:bg-[#FFFFFF] hover:border-[#BCD0E5] duration-300"
+								>
+									Order Now
+								</button>
+							</div>
+						</li>
+						<li
+							class="dark:bg-white mx-auto w-full max-w-[322px] text-center p-8 space-y-4 border border-gray-200 dark:border-gray-600 shadow-lg transition-transform duration-300 hover:scale-110"
+						>
+							<h3 class="text-xl font-bold text-[#22343D]">Premium</h3>
+							<p class="text-[#6B7280] text-sm">Brief price description</p>
+
+							<div class="flex gap-[8px] justify-center items-center mb-[40px]">
+								<p class="font-bold text-[76px] text-[#02897A] leading-[100px]">
+									10
+								</p>
+								<div class="flex flex-col items-start">
+									<span
+										class="font-bold text-[24px] text-[#02897A] leading-[30px]"
+										>$</span
+									>
+									<span
+										class="font-normal text-[16px] text-[#AFAFAF] leading-[19px]"
+										>Per / month</span
+									>
+								</div>
+							</div>
+
+							<ul class="flex flex-col gap-[16px]">
+								<li
+									class="font-medium text-[16px] text-[#22343D] leading-[22px]"
+								>
+									10+ Operators
+								</li>
+								<li
+									class="font-medium text-[16px] text-[#22343D] leading-[22px]"
+								>
+									Notifications
+								</li>
+								<li
+									class="font-medium text-[16px] text-[#22343D] leading-[22px]"
+								>
+									Landing Pages
+								</li>
+							</ul>
+
+							<div class="pt-[38px]">
+								<button
+									class="bg-[#02897A] text-white font-semibold py-[11px] px-[19px] border-[1px] border-transparent rounded-[8px] hover:bg-[#FFFFFF] hover:text-[#22343D] hover:border-[#BCD0E5] duration-300"
+								>
+									Order Now
+								</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="pb-[100px] md:pb-[150px]">
+				<div class="containers">
+					<div class="max-w-[537px] text-center mx-auto mb-[50px]">
+						<h2
+							class="font-bold dark:text-white text-[34px] text-[#22343D] leading-[57px] mb-[8px]"
+						>
+							What Clients Say
+						</h2>
+						<p
+							class="font-medium dark:text-white text-[16px] text-[#22343D] leading-[28px]"
+						>
+							Problems trying to resolve the conflict between the two major
+							realms of Classical physics: Newtonian mechanics
+						</p>
+					</div>
+					<ul class="flex flex-col lg:flex-row gap-[32px] md:gap-[64px]">
+						<li
+							class="dark:bg-white mx-auto text-start md:text-center lg:text-start max-w-[327px] rounded-[4px] border-[1px] border-[#DEDEDE] px-[26px] pt-[28px] pb-[23px] transition-transform duration-300 hover:scale-110"
+						>
+							<img
+								class="mb-[16px] md:mx-auto lg:mx-0"
+								src="./images/stars-image.svg"
+								alt="Stars image"
+							/>
+							<p
+								class="font-normal text-[16px] text-[#737373] leading-[28px] mb-[16px]"
+							>
+								Product helps you see how many more days you need to work to
+								reach your financial goal.
+							</p>
+							<div class="flex items-center gap-[14px]">
+								<img src="./images/clients-card-img.svg" alt="Card image" />
+								<div class="">
+									<h3
+										class="font-semibold text-[16px] text-[#02897A] leading-[24px]"
+									>
+										Wahid Ari
+									</h3>
+									<span
+										class="font-medium text-[14px] text-[#252B42] leading-[24px]"
+										>Designer</span
+									>
+								</div>
+							</div>
+						</li>
+						<li
+							class="dark:bg-white mx-auto text-start md:text-center lg:text-start max-w-[327px] rounded-[4px] border-[1px] border-[#DEDEDE] px-[26px] pt-[28px] pb-[23px] transition-transform duration-300 hover:scale-110"
+						>
+							<img
+								class="mb-[16px]"
+								src="./images/stars-image.svg"
+								alt="Stars image"
+							/>
+							<p
+								class="font-normal text-[16px] text-[#737373] leading-[28px] mb-[16px]"
+							>
+								Product helps you see how many more days you need to work to
+								reach your financial goal.
+							</p>
+							<div class="flex items-center gap-[14px]">
+								<img src="./images/clients-card-img2.svg" alt="Card image" />
+								<div class="">
+									<h3
+										class="font-semibold text-[16px] text-[#02897A] leading-[24px]"
+									>
+										Wahid Ari
+									</h3>
+									<span
+										class="font-medium text-[14px] text-[#252B42] leading-[24px]"
+										>Designer</span
+									>
+								</div>
+							</div>
+						</li>
+						<li
+							class="dark:bg-white mx-auto text-start md:text-center lg:text-start max-w-[327px] rounded-[4px] border-[1px] border-[#DEDEDE] px-[26px] pt-[28px] pb-[23px] transition-transform duration-300 hover:scale-110"
+						>
+							<img
+								class="mb-[16px]"
+								src="./images/stars-image.svg"
+								alt="Stars image"
+							/>
+							<p
+								class="font-normal text-[16px] text-[#737373] leading-[28px] mb-[16px]"
+							>
+								Product helps you see how many more days you need to work to
+								reach your financial goal.
+							</p>
+							<div class="flex items-center gap-[14px]">
+								<img src="./images/clients-card-img3.svg" alt="Card image" />
+								<div class="">
+									<h3
+										class="font-semibold text-[16px] text-[#02897A] leading-[24px]"
+									>
+										Wahid Ari
+									</h3>
+									<span
+										class="font-medium text-[14px] text-[#252B42] leading-[24px]"
+										>Designer</span
+									>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="pb-[90px] md:pb-[150px]">
+				<div class="containers px-[20px] md:px-[100px]">
+					<div
+						class="bg-[#02897A] flex flex-col lg:flex-row gap-[32px] md:gap-[10px] rounded-[32px]"
+					>
+						<div
+							class="pt-[49px] px-[20px] lg:pl-[51px] pb-0 md:pb-[56px] text-center lg:text-start"
+						>
+							<h2
+								class="font-semibold text-[32px] text-white leading-[151%] mb-[104px] md:mb-[98px]"
+							>
+								Join 100 Compannies who boost their business with Product
+							</h2>
+							<button
+								class="bg-white text-[20px] text-[#02897A] font-semibold pt-[13px] pl-[33px] pr-[35px] pb-[7px] rounded-[8px]"
+							>
+								Get This
+							</button>
+						</div>
+						<img
+							class="mx-auto lg:mx-0"
+							src="./images/join-section-content-img.png"
+							alt="join section image"
+							width="371"
+							height="351"
+						/>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="pb-[46px]">
+			<div
+				class="containers flex flex-col text-center lg:text-start lg:flex-row justify-between mb-[44px] lg:mb-[10px] px-[43px] px-0"
+			>
+				<div class="mx-auto lg:mx-0 mb-[32px] lg:mb-0">
+					<a class="flex gap-[16px] items-center mb-[24px]" href="/">
+						<img
+							src="./images/site-logo.svg"
+							alt="Site logo image"
+							width="40"
+							height="36"
+						/>
+						<span
+							class="font-bold dark:text-white text-[30px] text-[#173A56] leading-[28px]"
+							>Product</span
+						>
+					</a>
+					<div class="flex gap-[16px]">
+						<a href="https://www.instagram.com/" target="_blank"
+							><svg
+								width="40"
+								height="41"
+								viewBox="0 0 40 41"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="20" cy="20.0161" r="20" fill="#EDFFFC" />
+								<path
+									d="M25 10.0161H15C12.2386 10.0161 10 12.2547 10 15.0161V25.0161C10 27.7775 12.2386 30.0161 15 30.0161H25C27.7614 30.0161 30 27.7775 30 25.0161V15.0161C30 12.2547 27.7614 10.0161 25 10.0161Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M24 19.3859C24.1234 20.2182 23.9812 21.0681 23.5937 21.8149C23.2062 22.5617 22.5931 23.1673 21.8416 23.5456C21.0901 23.9239 20.2384 24.0555 19.4077 23.9219C18.5771 23.7882 17.8097 23.396 17.2148 22.8011C16.6199 22.2062 16.2277 21.4388 16.094 20.6081C15.9604 19.7775 16.092 18.9258 16.4703 18.1743C16.8485 17.4228 17.4541 16.8097 18.2009 16.4222C18.9477 16.0347 19.7977 15.8925 20.63 16.0159C21.4789 16.1418 22.2648 16.5374 22.8716 17.1442C23.4785 17.7511 23.8741 18.537 24 19.3859Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M25.5 14.5161H25.51"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="https://www.facebook.com/" target="_blank"
+							><svg
+								width="40"
+								height="40"
+								viewBox="0 0 40 40"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+								<path
+									d="M26 10H23C21.6739 10 20.4021 10.5268 19.4645 11.4645C18.5268 12.4021 18 13.6739 18 15V18H15V22H18V30H22V22H25L26 18H22V15C22 14.7348 22.1054 14.4804 22.2929 14.2929C22.4804 14.1054 22.7348 14 23 14H26V10Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="https://x.com/" target="_blank"
+							><svg
+								width="40"
+								height="40"
+								viewBox="0 0 40 40"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="20" cy="20" r="20" fill="#EDFFFC" />
+								<path
+									d="M31 11.0101C30.0424 11.6855 28.9821 12.2022 27.86 12.5401C27.2577 11.8476 26.4573 11.3567 25.567 11.134C24.6767 10.9112 23.7395 10.9673 22.8821 11.2945C22.0247 11.6218 21.2884 12.2045 20.773 12.9638C20.2575 13.7231 19.9877 14.6224 20 15.5401V16.5401C18.2426 16.5856 16.5013 16.1959 14.931 15.4055C13.3607 14.6151 12.0103 13.4487 11 12.0101C11 12.0101 7 21.0101 16 25.0101C13.9405 26.408 11.4872 27.109 9 27.0101C18 32.0101 29 27.0101 29 15.5101C28.9991 15.2315 28.9723 14.9537 28.92 14.6801C29.9406 13.6735 30.6608 12.4028 31 11.0101V11.0101Z"
+									stroke="#02897A"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="mx-auto lg:mx-0 mb-[32px] lg:mb-0">
+					<strong
+						class="font-medium dark:text-white text-[20px] text-[#22343D] leading-[30px] block mb-[8px]"
+					>
+						Resource
+					</strong>
+					<ul class="">
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#">About Us</a>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#">Blog</a>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#">Contact</a>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#">FAQ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mx-auto lg:mx-0 mb-[32px] lg:mb-0">
+					<strong
+						class="font-medium dark:text-white text-[20px] text-[#22343D] leading-[30px] block mb-[8px]"
+						>Legal Stuff</strong
+					>
+					<ul class="">
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#"
+								>Disclaimer</a
+							>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#"
+								>Financing</a
+							>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#"
+								>Privacy Policy</a
+							>
+						</li>
+						<li
+							class="font-normal dark:text-white text-[16px] text-[#22343D] leading-[35px]"
+						>
+							<a class="hover:text-[#02897A] duration-300" href="#"
+								>Terms of Service</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="max-w-[325px] mx-auto lg:mx-0">
+					<p
+						class="font-medium dark:text-white text-[20px] text-[#22343D] leading-[30px] mb-[34px] lg:mb-[30px]"
+					>
+						knowing you're always on the best energy deal.
+					</p>
+					<form method="post">
+						<input
+							required
+							autocomplete="off"
+							name="Email"
+							type="email"
+							placeholder="Your email"
+							class="border-[1px] border-[#BCD0E5] rounded-[4px] py-[10px] pl-[15px] shadow-lg mb-[21px] outline-none font-semibold text-[15px]"
+						/>
+						<button
+							type="submit"
+							class="font-bold text-[16px] text-white bg-[#02897A] py-[8px] px-[15px] rounded-[4px] border-[1px] border-transparent hover:bg-white hover:text-[#22343D] hover:border-[#BCD0E5] duration-300"
+						>
+							Sign up Now
+						</button>
+					</form>
+				</div>
+			</div>
+			<div
+				class="flex justify-center text-center lg:text-start font-normal dark:text-white text-[16px] text-[#22343D] leading-[30px] px-[25px]"
+			>
+				Made With Love By Figmaland All Right Reserved
+			</div>
+		</footer>
+		<script src="./js/script.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				darkMode: 'class',
+				theme: {
+					extend: {},
+				},
+			}
+		</script>
+	</body>
+</html>
